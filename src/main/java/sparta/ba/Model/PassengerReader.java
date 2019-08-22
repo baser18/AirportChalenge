@@ -37,8 +37,7 @@ public class PassengerReader {
             String b = scanner.next();
             mapRecords.put(a, b);
             System.out.println(mapRecords.get(b) + " " + mapRecords.get(a) + "Record Successfully Uploaded ");
-            if (scanner.nextLine() == null) System.exit(0);
-
+            //if (scanner.nextLine() == null) System.exit(0);
         }
 
 //        public static void getMapRecords () {
