@@ -13,9 +13,9 @@ public class PassengerReader {
     ArrayList<String> name = new ArrayList<String>();
     ArrayList<String> passportNum = new ArrayList<String>();
 
-    private static Map<String, String> mapRecords = new HashMap<>();
+    private static ArrayList<Passengers> mapRecords = new ArrayList<>();
 
-    public Map<String, String> readFile() throws IOException {
+    public ArrayList<Passengers> readFile() throws IOException {
 
         BufferedReader fileReader = new BufferedReader(new FileReader("resources/PassengerRecords.csv"));
         String line;
@@ -23,21 +23,22 @@ public class PassengerReader {
         while ((line = fileReader.readLine()) != null) {
             String[] values = line.split(",");
             Passengers passengers = new Passengers(values[0], values[1]);
-            mapRecords.put(values[1], values[0]);
+            mapRecords.add(new Passengers(values[0], values[1]));
         }
         return mapRecords;
     }
 
     public void addPassenger() {
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 1; i++) {
             System.out.println("Please enter Passenger Passport Number: ");
             String a = scanner.next();
             System.out.println("Please enter Passenger Name: ");
             String b = scanner.next();
-            mapRecords.put(a, b);
-            System.out.println(mapRecords.get(b) + " " + mapRecords.get(a) + "Record Successfully Uploaded ");
+            mapRecords.add(new Passengers(a, b));
+            System.out.println("Passenger records: " + a + " " + b + " Successfully Uploaded ");
             //if (scanner.nextLine() == null) System.exit(0);
+            System.out.println();
         }
 
 //        public static void getMapRecords () {
