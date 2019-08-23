@@ -11,7 +11,8 @@ public class App
     public static void main(String[] args) throws IOException {
         PassengerReader passengerReader = new PassengerReader();
         passengerReader.readFile();
-        // passengerReader.getMapRecords();
         passengerReader.addPassenger();
+        // passengerReader.getMapRecords();
+        //Flight.addPassenger();
     }
 }

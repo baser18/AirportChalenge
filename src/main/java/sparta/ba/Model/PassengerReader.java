@@ -1,17 +1,11 @@
 package sparta.ba.Model;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class PassengerReader {
 
     Scanner scanner = new Scanner(System.in);
-    //Array lists for user input into hashmap
-    ArrayList<String> name = new ArrayList<String>();
-    ArrayList<String> passportNum = new ArrayList<String>();
 
     private static ArrayList<Passengers> mapRecords = new ArrayList<>();
 
@@ -28,23 +22,31 @@ public class PassengerReader {
         return mapRecords;
     }
 
-    public void addPassenger() {
+    public void addPassenger() throws IOException {
 
-        for (int i = 0; i < 1; i++) {
-            System.out.println("Please enter Passenger Passport Number: ");
-            String a = scanner.next();
+        FileWriter writer = new FileWriter("PassengerRecords.csv");
+
+        for (int i = 0; i < 3; i++) {
             System.out.println("Please enter Passenger Name: ");
-            String b = scanner.next();
-            mapRecords.add(new Passengers(a, b));
-            System.out.println("Passenger records: " + a + " " + b + " Successfully Uploaded ");
-            //if (scanner.nextLine() == null) System.exit(0);
-            System.out.println();
+            String name = scanner.next();
+            System.out.println("Please enter Passenger Passport Number: ");
+            String passportN = scanner.next();
+            mapRecords.add(new Passengers(name, passportN));
+
+            System.out.println("Passenger records: " + name + " " + passportN + " Successfully Uploaded ");
+
+
+        }
         }
 
-//        public static void getMapRecords () {
-//
-//            System.out.println(mapRecords.toString());
-//
-//        }
+
+    public void returnList() {
+        //for loop prints array values thanks to to String
+        System.out.println("---------------- list of saved Passengers ------------------");
+        for (Passengers p : mapRecords) {
+            System.out.println(p);
+        }
     }
+
 }
+

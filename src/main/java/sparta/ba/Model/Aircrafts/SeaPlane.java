@@ -3,7 +3,8 @@ package sparta.ba.Model.Aircrafts;
 public class SeaPlane extends Aircraft {
 
     private int sea_serial_number = 12345;
-    private String hasTyres = "sea plane with no tyres";
+    private String hasHull = "sea plane with no tyres";
+    private int seatNumber = 10;
 
     /**
      * liftOff here changed behaviour instead of taking off the runway now is taking off the water that's why
@@ -18,7 +19,11 @@ public class SeaPlane extends Aircraft {
         return sea_serial_number;
     }
 
-    public String getHasTyres() {
-        return hasTyres;
+    public String getHasHull() {
+        return hasHull;
+    }
+
+    public int getSeatNumber() {
+        return seatNumber;
     }
 }
