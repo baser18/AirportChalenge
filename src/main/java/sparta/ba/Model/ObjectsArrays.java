@@ -2,15 +2,18 @@ package sparta.ba.Model;
 
 import sparta.ba.Model.Aircrafts.Airplane;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ObjectsArrays {
     // having arrays that will contain plane and flight objects
-    ArrayList<Flight> flights = new ArrayList<>();
+    Array<Flight> flights = new ArrayList<>();
     ArrayList<Airplane> airplanes = new ArrayList<>();
+    private Object ArrayList;
 
     public void setFlights() {
-        flights.add( int 12345, String "london", String "tokyo", Airplane airplane, ArrayList < Passengers > flightList)
+        boolean flightList = true;
+        flights.put(12345, "london", "tokyo", {}, ArrayList, flightList);
     }
 
 }
