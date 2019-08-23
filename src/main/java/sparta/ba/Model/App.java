@@ -12,6 +12,8 @@ public class App
         PassengerReader passengerReader = new PassengerReader();
         passengerReader.readFile();
         passengerReader.addPassenger();
+
+
         // passengerReader.getMapRecords();
         //Flight.addPassenger();
     }

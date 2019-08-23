@@ -24,6 +24,7 @@ public class Flight {
 
     Scanner scanner = new Scanner(System.in);
 
+
     public int getFlightNumber() {
         return flightNumber;
     }
