@@ -6,6 +6,7 @@ public class Airplane extends Aircraft {
     private String hasTyres;
     private int seatNumber;
 
+
     public Airplane(int air_serial_number, String hasTyres, int seatNumber) {
         this.air_serial_number = air_serial_number;
         this.hasTyres = hasTyres;
@@ -19,4 +20,5 @@ public class Airplane extends Aircraft {
     public String getHasHull() {
         return hasTyres;
     }
+
 }

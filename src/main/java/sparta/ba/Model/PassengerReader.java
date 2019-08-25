@@ -35,7 +35,6 @@ public class PassengerReader {
 
             System.out.println("Passenger records: " + name + " " + passportN + " Successfully Uploaded ");
 
-
         }
         }
 

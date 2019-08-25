@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PassengerReaderTest {
     @Test
-    public void testEmptyMap() {
+    public void testEmptyList() {
 
     }
 }

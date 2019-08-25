@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Flight {
-    private int flightNumber;
-    private String origin;
-    private String destination;
+    private int flightNumber = 12345;
+    private String origin = "london";
+    private String destination = "Tokio";
     private Airplane airplane;
     private static ArrayList<Passengers> flightList;
 
@@ -98,5 +98,6 @@ public class Flight {
             getPassengerFlightList();
         }
     }
+
 }
 
