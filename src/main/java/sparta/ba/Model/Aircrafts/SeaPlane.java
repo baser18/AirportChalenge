@@ -1,6 +1,6 @@
 package sparta.ba.Model.Aircrafts;
 
-public class SeaPlane extends Aircraft {
+public class SeaPlane implements Aircraft {
 
     private int sea_serial_number = 12345;
     private String hasHull = "sea plane with no tyres";
@@ -13,6 +13,11 @@ public class SeaPlane extends Aircraft {
     @Override
     public void canLiftOff() {
         System.out.println("The plane took off the Lake");
+    }
+
+    @Override
+    public void CanLand() {
+        System.out.println("Plane as landed on water");
     }
 
     public int getSea_Serial_number() {

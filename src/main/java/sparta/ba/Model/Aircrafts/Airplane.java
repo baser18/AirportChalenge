@@ -1,6 +1,6 @@
 package sparta.ba.Model.Aircrafts;
 
-public class Airplane extends Aircraft {
+public class Airplane implements Aircraft {
 
     private int air_serial_number;
     private String hasTyres;
@@ -21,4 +21,13 @@ public class Airplane extends Aircraft {
         return hasTyres;
     }
 
+    @Override
+    public void canLiftOff() {
+        System.out.println("The plane took off the runway");
+    }
+
+    @Override
+    public void CanLand() {
+        System.out.println("Plane as landed");
+    }
 }
