@@ -13,7 +13,7 @@ public class PassengerReader {
 
         BufferedReader fileReader = new BufferedReader(new FileReader("PassengerRecords.csv"));
         String line;
-        fileReader.readLine();
+        //fileReader.readLine();
         while ((line = fileReader.readLine()) != null) {
             String[] values = line.split(",");
             Passengers passengers = new Passengers(values[0], values[1]);
@@ -42,6 +42,7 @@ public class PassengerReader {
             System.out.println("Passenger records: (" + name + " , " + passportN + ") Successfully Uploaded ");
 
             returnList();
+
         }
 
     }
