@@ -11,7 +11,7 @@ public class PassengerReader {
 
     public ArrayList<Passengers> readFile() throws IOException {
 
-        BufferedReader fileReader = new BufferedReader(new FileReader("resources/PassengerRecords.csv"));
+        BufferedReader fileReader = new BufferedReader(new FileReader("PassengerRecords.csv"));
         String line;
         fileReader.readLine();
         while ((line = fileReader.readLine()) != null) {
@@ -24,20 +24,27 @@ public class PassengerReader {
 
     public void addPassenger() throws IOException {
 
-        FileWriter writer = new FileWriter("PassengerRecords.csv");
+        FileWriter writer = new FileWriter("target/PassengerRecords.csv");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("PassengerRecords.csv", true));
+        PrintWriter printWriter = new PrintWriter(bufferedWriter);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 1; i++) {
             System.out.println("Please enter Passenger Name: ");
             String name = scanner.next();
             System.out.println("Please enter Passenger Passport Number: ");
             String passportN = scanner.next();
             mapRecords.add(new Passengers(name, passportN));
 
-            System.out.println("Passenger records: " + name + " " + passportN + " Successfully Uploaded ");
+            printWriter.println(name + "," + passportN);
+            printWriter.flush();
+            printWriter.close();
 
-        }
+            System.out.println("Passenger records: (" + name + " , " + passportN + ") Successfully Uploaded ");
+
+            returnList();
         }
 
+    }
 
     public void returnList() {
         //for loop prints array values thanks to to String
