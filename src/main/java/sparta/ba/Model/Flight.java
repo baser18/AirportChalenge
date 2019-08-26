@@ -1,5 +1,6 @@
 package sparta.ba.Model;
 
+import sparta.ba.Model.Aircrafts.Aircraft;
 import sparta.ba.Model.Aircrafts.Airplane;
 
 import java.io.IOException;
@@ -7,18 +8,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Flight {
-    private int flightNumber = 12345;
-    private String origin = "london";
-    private String destination = "Tokio";
-    private Airplane airplane;
-    private static ArrayList<Passengers> flightList;
+    private int flightNumber;
+    private String origin;
+    private String destination;
+    public Aircraft airCraft;
+    private ArrayList<Passengers> flightList;
 
 
-    public Flight(int flightNumber, String origin, String destination, Airplane airplane, ArrayList<Passengers> flightList) {
+    public Flight(int flightNumber, String origin, String destination, Aircraft aircraft, ArrayList<Passengers> flightList) {
         this.flightNumber = flightNumber;
         this.origin = origin;
         this.destination = destination;
-        this.airplane = airplane;
+        this.airCraft = airCraft;
         this.flightList = flightList;
     }
 
@@ -52,12 +53,12 @@ public class Flight {
         this.destination = destination;
     }
 
-    public Airplane getAirplane() {
-        return airplane;
+    public Aircraft getAirCraft() {
+        return airCraft;
     }
 
     public void setAirplane(Airplane airplane) {
-        this.airplane = airplane;
+        this.airCraft = airplane;
     }
 
     public static ArrayList<Passengers> getFlightList() {
